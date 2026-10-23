@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS BASICS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Assignment 5 </h1>
+
+        
+        <div class="card">
+            <h2>User Profile</h2>
+            <form id="profileForm">
+                <label>Username:</label>
+                <input type="text" id="usernameInput" required>
+
+                <label>Birth Year:</label>
+                <input type="number" id="birthYearInput" required>
+
+                <button type="submit">Update Profile</button>
+            </form>
+
+            <div class="output-box">
+                <p><strong>Name:</strong> <span id="displayName"></span></p>
+                <p><strong>Birth Year:</strong> <span id="displayBirthYear"></span></p>
+                <p><strong>Calculated Age:</strong> <span id="displayAge"></span></p>
+            </div>
+        </div>
+
+     
+        <div class="card">
+            <h2>Hobbies List</h2>
+            <input type="text" id="newItemInput" placeholder="Enter new hobby">
+            <br><br>
+            <button id="addItemBtn" type="button">Add hobbie</button>
+            <button id="removeItemBtn" type="button" class="btn-danger">Remove last hobbie</button>
+
+            <ul id="hobbiesList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
