@@ -27,7 +27,7 @@ console.log("Calculated Age:", age);
 var hobbiesList = document.getElementById("hobbiesList");
 
 function renderHobbies() {
-    hobbiesList.innerHTML = ""; // Clear current list
+    hobbiesList.innerHTML = ""; 
     for (var i = 0; i < userProfile.hobbies.length; i++) {
         var li = document.createElement("li");
         li.innerText = userProfile.hobbies[i];
@@ -43,7 +43,7 @@ renderHobbies();
 var profileForm = document.getElementById("profileForm");
 
 profileForm.addEventListener("submit", function(event) {
-    event.preventDefault(); // Stop page from refreshing
+    event.preventDefault(); 
 
     
     var enteredName = document.getElementById("usernameInput").value;
@@ -72,9 +72,9 @@ addItemBtn.addEventListener("click", function() {
     var newItemText = document.getElementById("newItemInput").value;
 
     if (newItemText !== "") {
-        userProfile.hobbies.push(newItemText); // Add to array
-        renderHobbies(); // Refresh list display
-        document.getElementById("newItemInput").value = ""; // Clear input
+        userProfile.hobbies.push(newItemText); 
+        renderHobbies(); 
+        document.getElementById("newItemInput").value = ""; 
     } else {
         alert("Please type a hobby first!");
     }
@@ -86,8 +86,8 @@ var removeItemBtn = document.getElementById("removeItemBtn");
 
 removeItemBtn.addEventListener("click", function() {
     if (userProfile.hobbies.length > 0) {
-        userProfile.hobbies.pop(); // Remove last item from array
-        renderHobbies(); // Refresh list display
+        userProfile.hobbies.pop(); 
+        renderHobbies();
     } else {
         alert("The list is already empty!");
     }
